@@ -1,17 +1,17 @@
 # Podcast API
 
-Esta é uma simples API de podcasts desenvolvida em Node.js sem a utilização de frameworks. A API permite listar episódios de podcasts e filtrar episódios específicos.
+This is a simple podcast API developed in Node.js without using frameworks. The API allows you to list podcast episodes and filter specific episodes.
 
-## Estrutura do Projeto
+## Project Structure
 
-- `controllers/`: Contém os controladores para manipulação de dados dos podcasts.
-  - `podcasts-controller.ts`: Define as funções para listar e filtrar episódios de podcasts.
-- `routes/`: Define as rotas utilizadas na API.
-  - `routes.ts`: Contém as rotas da API.
-- `utils/`: Contém utilitários diversos utilizados no projeto.
-  - `http-methods.ts`: Define os métodos HTTP suportados pela API.
+- `controllers/`: Contains the controllers for handling podcast data.
+  - `podcasts-controller.ts`: Defines the functions to list and filter podcast episodes.
+- `routes/`: Defines the routes used in the API.
+  - `routes.ts`: Contains the API routes.
+- `utils/`: Contains various utilities used in the project.
+  - `http-methods.ts`: Defines the HTTP methods supported by the API.
 
-## Código Exemplo
+## Example Code
 
 ```typescript
 import * as http from "http";
@@ -31,47 +31,50 @@ export const app = async (request: http.IncomingMessage, response: http.ServerRe
         await getFilterEpisodies(request, response);
     }
 };
+Installation Instructions
+Clone the repository:
 
-# Instruções de instalação
-Clone o repositório:
+sh
+git clone https://github.com/your-username/podcast-api.git
+Navigate to the project directory:
 
-git clone https://github.com/seu-usuario/podcast-api.git
-Navegue até o diretório do projeto:
-
+sh
 cd podcast-api
-Instale as dependências:
+Install the dependencies:
 
+sh
 npm install
-Inicie o servidor:
+Start the server:
 
-npm run start:dev
-Uso
-Listar Episódios
-Endpoint: api/list
+sh
+npm start
+Usage
+List Episodes
+Endpoint: /list
 
-Método HTTP: GET
+HTTP Method: GET
 
-Descrição: Retorna a lista de todos os episódios de podcasts.
+Description: Returns the list of all podcast episodes.
 
-Filtrar Episódios
-Endpoint: api/episode?p=nomePodCast
+Filter Episodes
+Endpoint: /episode
 
-Método HTTP: GET
+HTTP Method: GET
 
-Descrição: Retorna informações de um episódio específico com base nos parâmetros de consulta fornecidos.
+Description: Returns information about a specific episode based on the provided query parameters.
 
-Contribuição
-Sinta-se à vontade para contribuir com este projeto. Para isso, siga os passos abaixo:
+Contribution
+Feel free to contribute to this project. Follow the steps below:
 
-Faça um fork deste repositório.
+Fork this repository.
 
-Crie uma nova branch para a sua feature ou correção: git checkout -b minha-feature.
+Create a new branch for your feature or fix: git checkout -b my-feature.
 
-Faça os commits das suas alterações: git commit -m 'Minha nova feature'.
+Commit your changes: git commit -m 'My new feature'.
 
-Envie para o branch original: git push origin minha-feature.
+Push to the original branch: git push origin my-feature.
 
-Crie uma pull request.
+Create a pull request.
 
-Licença
-Este projeto está licenciado sob a licença MIT. Consulte o arquivo LICENSE para obter mais informações.
+License
+This project is licensed under the MIT License. See the LICENSE file for more information.
